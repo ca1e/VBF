@@ -1,129 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B107D197-8755-430F-98C8-51CA4C628F09}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VBF.MiniSharp</RootNamespace>
-    <AssemblyName>MiniSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>warnings</Nullable>
+    <LangVersion>10</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <StartupObject>VBF.MiniSharp.ProgramEntry</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xml" />
-    <Reference Include="VBF.Compilers.Common">
-      <HintPath>..\..\..\bin\VBF.Compilers.Common.dll</HintPath>
+    <Reference Include="Compilers.Common">
+      <HintPath>..\..\..\bin\net6.0\Compilers.Common.dll</HintPath>
     </Reference>
-    <Reference Include="VBF.Compilers.Parsers">
-      <HintPath>..\..\..\bin\VBF.Compilers.Parsers.dll</HintPath>
+    <Reference Include="Compilers.Parsers">
+      <HintPath>..\..\..\bin\net6.0\Compilers.Parsers.dll</HintPath>
     </Reference>
-    <Reference Include="VBF.Compilers.Parsers.Combinators">
-      <HintPath>..\..\..\bin\VBF.Compilers.Parsers.Combinators.dll</HintPath>
+    <Reference Include="Compilers.Parsers.Combinators">
+      <HintPath>..\..\..\bin\net6.0\Compilers.Parsers.Combinators.dll</HintPath>
     </Reference>
-    <Reference Include="VBF.Compilers.Scanners">
-      <HintPath>..\..\..\bin\VBF.Compilers.Scanners.dll</HintPath>
+    <Reference Include="Compilers.Scanners">
+      <HintPath>..\..\..\bin\net6.0\Compilers.Scanners.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ArrayType.cs" />
-    <Compile Include="Ast\ArrayAssign.cs" />
-    <Compile Include="Ast\Assign.cs" />
-    <Compile Include="Ast\ArrayLength.cs" />
-    <Compile Include="Ast\ArrayLookup.cs" />
-    <Compile Include="Ast\AstNode.cs" />
-    <Compile Include="Ast\AstVisitor.cs" />
-    <Compile Include="Ast\IAstVisitor.cs" />
-    <Compile Include="Ast\Binary.cs" />
-    <Compile Include="Ast\Block.cs" />
-    <Compile Include="Ast\BooleanLiteral.cs" />
-    <Compile Include="Ast\BooleanType.cs" />
-    <Compile Include="Ast\Call.cs" />
-    <Compile Include="Ast\ClassDecl.cs" />
-    <Compile Include="Ast\Expression.cs" />
-    <Compile Include="Ast\Formal.cs" />
-    <Compile Include="Ast\IdentifierType.cs" />
-    <Compile Include="Ast\IntArrayType.cs" />
-    <Compile Include="Ast\IntegerType.cs" />
-    <Compile Include="Ast\TypeConvert.cs" />
-    <Compile Include="Ast\VariableRef.cs" />
-    <Compile Include="Ast\IfElse.cs" />
-    <Compile Include="Ast\IntegerLiteral.cs" />
-    <Compile Include="Ast\MainClass.cs" />
-    <Compile Include="Ast\MethodDecl.cs" />
-    <Compile Include="Ast\MethodRef.cs" />
-    <Compile Include="Ast\NewArray.cs" />
-    <Compile Include="Ast\NewObject.cs" />
-    <Compile Include="Ast\Not.cs" />
-    <Compile Include="Ast\Program.cs" />
-    <Compile Include="Ast\Statement.cs" />
-    <Compile Include="Ast\This.cs" />
-    <Compile Include="Ast\Type.cs" />
-    <Compile Include="Ast\TypeRef.cs" />
-    <Compile Include="Ast\VarDecl.cs" />
-    <Compile Include="Ast\Variable.cs" />
-    <Compile Include="Ast\While.cs" />
-    <Compile Include="Ast\WriteLine.cs" />
-    <Compile Include="Ast\FieldDecl.cs" />
-    <Compile Include="CodeClassType.cs" />
-    <Compile Include="ExtensionTable.cs" />
-    <Compile Include="Field.cs" />
-    <Compile Include="MemberDeclResolver.cs" />
-    <Compile Include="Method.cs" />
-    <Compile Include="MethodBodyResolver.cs" />
-    <Compile Include="MethodOverloadingComparer.cs" />
-    <Compile Include="MiniSharpParser.CP.cs" />
-    <Compile Include="MiniSharpParser.cs" />
-    <Compile Include="Parameter.cs" />
-    <Compile Include="PrimaryType.cs" />
-    <Compile Include="ProgramEntry.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Targets\Cil\EmitTranslator.cs" />
-    <Compile Include="TypeBase.cs" />
-    <Compile Include="TypeCollection.cs" />
-    <Compile Include="TypeDeclResolver.cs" />
-    <Compile Include="VariableInfo.cs" />
-    <Compile Include="VariableCollection.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

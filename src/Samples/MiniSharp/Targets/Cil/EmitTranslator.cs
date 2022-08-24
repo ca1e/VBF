@@ -45,9 +45,9 @@ namespace VBF.MiniSharp.Targets.Cil
         public EmitTranslator(AppDomain hostDomain, string name)
         {
             AssemblyName asmName = new AssemblyName(name);
-            m_assembly = hostDomain.DefineDynamicAssembly(asmName, AssemblyBuilderAccess.RunAndSave);
+            m_assembly = AssemblyBuilder.DefineDynamicAssembly(asmName, AssemblyBuilderAccess.Run);
 
-            m_module = m_assembly.DefineDynamicModule(name + ".exe", true);
+            m_module = m_assembly.DefineDynamicModule(name + ".exe");
             m_typeTable = new ExtensionTable<Type>();
             m_methodTable = new ExtensionTable<MethodInfo>();
             m_ctorTable = new ExtensionTable<ConstructorInfo>();
@@ -60,8 +60,9 @@ namespace VBF.MiniSharp.Targets.Cil
 
             Debug.Assert(m_assembly != null);
 
-            m_assembly.SetEntryPoint(m_mainMethod, PEFileKinds.ConsoleApplication);
-            m_assembly.Save(url);
+            // TODO
+            //m_assembly.SetEntryPoint(m_mainMethod, PEFileKinds.ConsoleApplication);
+            //m_assembly.Save(url);
         }
 
         private Type GetClrType(TypeBase t)

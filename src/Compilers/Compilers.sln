@@ -1,17 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.Scanners", "Compilers.Scanners\Compilers.Scanners.csproj", "{F8ECBF53-C1B2-412B-8322-9E3D6AAC66ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compilers.Scanners", "Compilers.Scanners\Compilers.Scanners.csproj", "{F8ECBF53-C1B2-412B-8322-9E3D6AAC66ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.UnitTests", "Compilers.UnitTests\Compilers.UnitTests.csproj", "{BEF0BC9A-3CEF-4054-A496-2AE38FCC6F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compilers.Parsers.Combinators", "Compilers.Parsers.Combinators\Compilers.Parsers.Combinators.csproj", "{57E34138-CEE5-422B-8EA2-CB7A9574805D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.Parsers.Combinators", "Compilers.Parsers.Combinators\Compilers.Parsers.Combinators.csproj", "{57E34138-CEE5-422B-8EA2-CB7A9574805D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compilers.Common", "Compilers.Common\Compilers.Common.csproj", "{283A7585-ECF4-405A-824F-AF926C16C78C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.Common", "Compilers.Common\Compilers.Common.csproj", "{283A7585-ECF4-405A-824F-AF926C16C78C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.Parsers", "Compilers.Parsers\Compilers.Parsers.csproj", "{323A8312-8E82-4A81-91CC-2D60F85AE751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compilers.Parsers", "Compilers.Parsers\Compilers.Parsers.csproj", "{323A8312-8E82-4A81-91CC-2D60F85AE751}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{431C4A13-1DDA-4CC1-8DEF-B9CAB63E6A5E}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{431C4A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compilers.Intermediate", "Compilers.Intermediate\Compilers.Intermediate.csproj", "{4BDBA069-E4B1-4850-91A2-2A9CF789C3DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compilers.Intermediate", "Compilers.Intermediate\Compilers.Intermediate.csproj", "{4BDBA069-E4B1-4850-91A2-2A9CF789C3DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +30,6 @@ Global
 		{F8ECBF53-C1B2-412B-8322-9E3D6AAC66ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8ECBF53-C1B2-412B-8322-9E3D6AAC66ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8ECBF53-C1B2-412B-8322-9E3D6AAC66ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEF0BC9A-3CEF-4054-A496-2AE38FCC6F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEF0BC9A-3CEF-4054-A496-2AE38FCC6F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEF0BC9A-3CEF-4054-A496-2AE38FCC6F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEF0BC9A-3CEF-4054-A496-2AE38FCC6F29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57E34138-CEE5-422B-8EA2-CB7A9574805D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57E34138-CEE5-422B-8EA2-CB7A9574805D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57E34138-CEE5-422B-8EA2-CB7A9574805D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,5 +49,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFAC032C-375F-4FBE-A097-A85099DBD119}
 	EndGlobalSection
 EndGlobal

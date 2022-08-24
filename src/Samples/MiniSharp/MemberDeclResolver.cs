@@ -19,6 +19,7 @@ using System.Diagnostics;
 using System.Linq;
 using VBF.Compilers;
 using VBF.MiniSharp.Ast;
+using Type = VBF.MiniSharp.Ast.Type;
 
 namespace VBF.MiniSharp
 {

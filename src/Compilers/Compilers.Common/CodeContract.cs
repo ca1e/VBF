@@ -18,7 +18,7 @@ using System;
 
 namespace VBF.Compilers
 {
-    static class CodeContract
+    public static class CodeContract
     {
         public static void RequiresArgumentNotNull(object argValue, string argName)
         {
